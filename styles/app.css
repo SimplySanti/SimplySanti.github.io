@@ -1,3 +1,14 @@
+
+:root {
+    --primary-color: #262D2A;
+    --secondary-color: #116466;
+    --terciary-color: #D9B08C;
+    --lightPrimary-color: #FFFBF5;
+    --lightSeconday-color: white;
+    --h1-font-size: 7vw;
+    --p-font-size: 2vw;
+  }
+
 *,
 *::before,
 *::after {
@@ -7,7 +18,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: #FFFBF5;
     font-family: "Signika Negative", sans-serif;
     overflow-y: auto;
 }
@@ -24,17 +35,19 @@ body {
 .nav-bar {
     display: flex;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    left: 20%;
+    border: var(--secondary-color) solid;
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+    width: 60%;
     height: 50px;
-    color: #ffffff;
-    background-color: transparent;
-    font-weight: 700;
-    z-index: 100;
+    margin: auto;
+    font-weight: bold;
+    background-color: #FFEED6;
+    
 }
 
-.li-row {
+.nav-ul{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -42,11 +55,9 @@ body {
     width: 100%;
     list-style-type: none;
     padding: 0 15%;
-    margin-top: 30px;
 }
 
 .page1 {
-    color: white;
     display: flex;
     width: 100%;
     height: 100vh;
@@ -54,30 +65,50 @@ body {
 }
 
 .page1left {
-    width: 40%;
+    width: 50%;
     height: 100%;
 }
-
-.name {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
-.aboutMe {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
 
 .page1right {
     width: 45%;
     height: auto;
     display: flex;
-    margin-left: 15%;
+    margin-left: 5%;
+}
+.front-message{
+    padding: 5% 0;
+}
+
+.welcome-msg{
+    font-size: var(--p-font-size);
+    font-weight: bold;
+    color: var(--terciary-color);
+}
+
+.name {
+    font-size: var(--h1-font-size);
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+.aboutMe {
+    font-size: var(--p-font-size);
+    font-weight: bold;
+    color: var(--terciary-color);
+}
+
+.stickerContainer{
+    border: 10px solid var(--secondary-color);
+    height: 0;
+    width: 100%;
+    padding-bottom: 90%;
+    overflow: hidden;
+}
+
+.stickerCanvas{
+    height: 0;
+    width: 100%;
+    padding-bottom: 100%;
+    background-image: url("../images/fabric_bg.png");
 }
 
 .wrapper {
@@ -91,13 +122,20 @@ img {
     max-height: auto;
 }
 
-.parallax__layer {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+
+a {
+    text-decoration: none;
+    color: #ffffff;
 }
 
-.whiteFrame {
-    border: 10px solid white;
+.contact-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20%;
+    margin-top: 30px;
+}
+
+.highlight{
+    color: var(--secondary-color);
 }

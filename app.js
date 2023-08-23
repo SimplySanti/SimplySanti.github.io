@@ -1,3 +1,5 @@
+const numberOfStickers = 25
+
 function randomIntFromInterval(min, max) {
 	return Math.floor(Math.random() * (max - min + 1) + min)
 }
@@ -21,12 +23,10 @@ function viewport_convert(px = 0, vw = 0, vh = 0) {
 	}
 }
 
-const numberOfStickers = 25
 let unusedStickers = []
 
 const stickerCanvas = document.querySelector(".stickerCanvas")
 const stickerCanvasEnd = stickerCanvas.getBoundingClientRect()
-console.log(stickerCanvasEnd)
 
 stickerCanvas.addEventListener("click", (e) => {
 	if (unusedStickers.length === 0) {
@@ -45,7 +45,7 @@ stickerCanvas.addEventListener("click", (e) => {
 
 	stickerEl.classList.add("sticker")
 	stickerEl.style.height = `${randomHeight}vw`
-    stickerEl.style.transform = `rotate(${randomIntFromInterval(-25,25)}deg)`
+	stickerEl.style.transform = `rotate(${randomIntFromInterval(-25, 25)}deg)`
 
 	if (e.clientX + imageHeightPx / 2 > stickerCanvasEnd.right) {
 		const overflowRight =
@@ -54,21 +54,24 @@ stickerCanvas.addEventListener("click", (e) => {
 			e.clientX - imageHeightPx / 2 - overflowRight
 		}px`
 	} else if (e.clientX - imageHeightPx / 2 < stickerCanvasEnd.left) {
-	
 	} else {
 		stickerEl.style.left = `${e.clientX - imageHeightPx / 2}px`
 	}
 
-    if(e.clientY + imageHeightPx / 2 > stickerCanvasEnd.bottom) {
-        const overflowBottom = e.clientY + imageHeightPx / 2 - stickerCanvasEnd.bottom
-        stickerEl.style.top = `${e.clientY - imageHeightPx / 2 - overflowBottom}px`
-    }
-    else if(e.clientY - imageHeightPx / 2 < stickerCanvasEnd.top) {
-        //const overflowTop = e.clientY - imageHeightPx / 2 - stickerCanvasEnd.top
-    }
-    else {
-        stickerEl.style.top = `${e.clientY - imageHeightPx / 2}px`
-    }
+	if (e.clientY + imageHeightPx / 2 > stickerCanvasEnd.bottom) {
+		const overflowBottom =
+			e.clientY + imageHeightPx / 2 - stickerCanvasEnd.bottom
+		stickerEl.style.top = `${
+			e.clientY - imageHeightPx / 2 - overflowBottom
+		}px`
+	} else if (e.clientY - imageHeightPx / 2 < stickerCanvasEnd.top) {
+		//const overflowTop = e.clientY - imageHeightPx / 2 - stickerCanvasEnd.top
+	} else {
+		stickerEl.style.top = `${e.clientY - imageHeightPx / 2}px`
+	}
 
 	stickerCanvas.appendChild(stickerEl)
 })
+
+const featuredProject2 = document.querySelector(".projectItem2");
+

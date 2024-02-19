@@ -1,12 +1,13 @@
 :root {
-	--primary-color: #262d2a;
-	--secondary-color: #116466;
-	--terciary-color: #d9b08c;
-	--lightPrimary-color: #fffbf5;
-	--lightSecondary-color: white;
-	--secondary-colorContrast: #028d90;
-	--h1-font-size: 7vw;
-	--p-font-size: 2vw;
+	--primary-dark: #163020;
+	--secondary-dark: #304D30;
+	--terciary-dark: #597E52;
+	--primary-light: #FFFFEC;
+	--secondary-light: #F1E4C3;
+	--terciary-light: #C6A969;
+	--background: white;
+	--font-family-primary: "Goldman";
+	--font-family-title: "Teko";
 }
 
 *,
@@ -18,8 +19,7 @@
 }
 
 body {
-	background-color: #fffbf5;
-	font-family: "Signika Negative", sans-serif;
+	background-color: var(--background);
 	overflow-y: auto;
 }
 
@@ -33,243 +33,72 @@ body {
 }
 
 .nav-bar {
-	display: flex;
-	position: fixed;
-	z-index: 1;
-	left: 20%;
-	border: var(--secondary-color) solid;
-	border-top: none;
-	border-radius: 0 0 20px 20px;
-	width: 60%;
-	height: 50px;
-	margin: auto;
-	font-weight: bold;
-	color: var(--secondary-color);
-	background-color: #ffffff;
-}
-
-.nav-ul {
+	height: 10vh;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	list-style-type: none;
-	padding: 0 15%;
+	background-color: white;
 }
 
-.page1 {
+.title-page{
+	height: 38vh;
 	display: flex;
-	width: 100%;
-	height: 100vh;
-	padding: 8% 10%;
 }
 
-.page1left {
-	width: 50%;
+.title-container{
 	height: 100%;
-}
-
-.page1right {
-	width: 45%;
-	height: auto;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
-	margin-left: 5%;
-}
-.front-message {
-	padding: 5% 0;
+	align-items: left;
+	padding: 15px;
 }
 
-.name {
-	font-size: var(--h1-font-size);
+.title-name{
+	font-family: var(--font-family-title);
 	font-weight: bold;
-	color: var(--secondary-color);
+	font-size: 5.2rem;
+	height: 5rem;
+	color: var(--primary-dark);
 }
 
-.pFormat {
-	font-size: var(--p-font-size);
-	font-weight: bold;
-	color: var(--terciary-color);
+.title-sub{
+	font-family: var(--font-family-primary);
+	color: var(--secondary-dark);
+	width: 100%;
+	font-size: 1.2rem;
+	font-weight: 500;
+	padding: 2vh 0;
 }
 
-.stickerContainer {
-	display: flex;
-	border: 10px solid var(--secondary-color);
-	height: 32vw;
-	width: 36vw;
-	overflow: hidden;
-	background-image: url("../images/fabric_bg.png");
+.title-contact{
+	height: fit-content;
+	margin-left: -7px;
+	margin-top: -10px;
 }
 
-.stickerCanvas {
+.palette-bar{
 	height: 100%;
-	width: 100%;
-}
-
-.sticker {
-	position: absolute;
-	z-index: 0;
-}
-
-.stickerInstruction {
-	display: flex;
-	justify-content: center;
-	margin-top: 10px;
-}
-
-.wrapper {
-	position: relative;
-	width: 100%;
-	height: auto;
-}
-
-.contact-row {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	width: 20%;
-	margin-top: 30px;
-}
-
-.highlight {
-	color: var(--secondary-color);
-}
-
-.page2 {
+	width: 20vw;
 	display: flex;
 	flex-direction: column;
+}
+
+.color-block{
+	height: 16.6666666666667%;
 	width: 100%;
-	height: 100vh;
-	padding: 5% 10%;
-	background-color: var(--primary-color);
-}
-
-.infoHeader p {
-	font-size: var(--p-font-size);
-	font-weight: bold;
-	color: var(--terciary-color);
-}
-
-.divisionLine {
-	width: 100%;
-	border-radius: 5px;
-	height: 3px;
-	background-color: var(--terciary-color);
-	margin: 10px 0;
-}
-
-.projectGallery {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: auto;
-	grid-auto-rows: 1fr;
-	gap: 2vw;
-	margin-top: 3%;
-	height: 100%;
-	padding: 0 5%;
-}
-
-.projectItems {
-	background-color: var(--secondary-colorContrast);
-	border: var(--secondary-color) solid 5px;
-	border-radius: 10px;
-	min-height: 100%;
-	width: 100%;
-}
-
-.projectItems img {
-	width: 100%;
-	height: 100%;
-	border-radius: 10px;
-	object-fit: contain;
-}
-
-.projectItem1 {
-	grid-column: 1;
-	grid-row: 1 / 3;
-}
-
-.projectItem2 {
-	min-height: 30vh;
-	grid-column: 2 / 4;
-}
-
-.projectItem3 {
-	grid-column: 2;
-	grid-row: 2;
-}
-
-.projectItem4 {
-	grid-column: 3;
-	grid-row: 2;
 }
 
 .footer {
-	padding: 2% 10%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-.signature {
-	margin: 2% 0;
+
 }
 
 .lamp {
 	height: 4vw;
 }
 
-.flip-card {
-	background-color: transparent;
-	width: 100%;
-	height: 100%;
-	perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	transition: transform 1.2s;
-	transform-style: preserve-3d;
-}
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-	transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flip-card-front,
-.flip-card-back {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	-webkit-backface-visibility: hidden; /* Safari */
-	backface-visibility: hidden;
-	border: var(--terciary-color) solid 8px;
-	border-radius: 10px;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-	background-color: var(--lightPrimary-color);
-	color: black;
-	padding: 3vw;
-}
-
-/* Style the back side */
-.flip-card-back {
-	background-color: var(--lightPrimary-color);
-	color: black;
-	transform: rotateY(180deg);
-}
-
-.flip-card.cardImage {
-	width: 70%;
-	display: block;
-	margin: auto;
-}
+@media screen and (min-width: 768px) {
+	.container {
+	  margin: 1em 2em;
+	}
+  }

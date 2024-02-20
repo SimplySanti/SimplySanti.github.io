@@ -1,10 +1,10 @@
 :root {
 	--primary-dark: #163020;
-	--secondary-dark: #304D30;
-	--terciary-dark: #597E52;
-	--primary-light: #FFFFEC;
-	--secondary-light: #F1E4C3;
-	--terciary-light: #C6A969;
+	--secondary-dark: #304d30;
+	--terciary-dark: #597e52;
+	--primary-light: #ffffec;
+	--secondary-light: #f1e4c3;
+	--terciary-light: #c6a969;
 	--background: white;
 	--font-family-primary: "Goldman";
 	--font-family-title: "Teko";
@@ -38,14 +38,15 @@ body {
 	flex-direction: row;
 	justify-content: space-between;
 	background-color: white;
+	margin: 0 2vw;
 }
 
-.title-page{
+.title-section {
 	height: 38vh;
 	display: flex;
 }
 
-.title-container{
+.title-container {
 	height: 100%;
 	width: 100%;
 	display: flex;
@@ -54,7 +55,7 @@ body {
 	padding: 15px;
 }
 
-.title-name{
+.title-name {
 	font-family: var(--font-family-title);
 	font-weight: bold;
 	font-size: 5.2rem;
@@ -62,7 +63,7 @@ body {
 	color: var(--primary-dark);
 }
 
-.title-sub{
+.title-sub {
 	font-family: var(--font-family-primary);
 	color: var(--secondary-dark);
 	width: 100%;
@@ -71,28 +72,96 @@ body {
 	padding: 2vh 0;
 }
 
-.title-contact{
+.title-contact {
 	height: fit-content;
 	margin-left: -7px;
 	margin-top: -10px;
-}								
+}
 
-.palette-bar{
+.palette-bar {
 	height: 100%;
 	width: 20vw;
 	display: flex;
 	flex-direction: column;
 }
 
-.color-block{
+.color-block {
 	height: 16.6666666666667%;
 	width: 100%;
 }
 
+.project-section {
+	margin: 5vh 0;
+	width: 100%;
+}
+
+.subtitle {
+	font-family: var(--font-family-primary);
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: var(--primary-dark);
+	margin: 0 8vw;
+}
+
+.project-container {
+	margin: 0 5vw;
+}
+
+.project-card {
+	margin: 4vh 0;
+	background-color: var(--secondary-light);
+	border-radius: 15px;
+	height: 22vh;
+	box-shadow: rgba(0, 0, 0, 0.15) 2px 4px 2.6px;
+}
+
+.about-me-section{
+	width: 100%;
+	margin: 5vh 0;
+}
+
+.about-me-container{
+	margin: 3vh 8vw;
+}
+
+.about-me-text{
+	font-family: var(--font-family-primary);
+	font-size: 1.25rem;
+	font-weight: 400;
+	color: black;
+}
+
+.toolbox-section{
+	width: 100%;
+	margin: 5vh 0
+}
+
+.toolbox-container{
+	display: grid;
+	gap: .5vw;
+	grid-template-columns: repeat(3, 1fr);
+	margin: 3vh 8vw;
+}
+
+.cv-button-container{
+	margin: 0 8vw;
+}
+
+.cv-button{
+	height: 8vh;
+	margin: 5vh 0;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	background-color: var(--secondary-dark);
+	font-family: var(--font-family-primary);
+	color: white;
+	font-size: 1.5rem;
+}
+
 footer {
-	position: fixed;
-	left: 0;
-	bottom: 0;
 	width: 100%;
 	background-color: white;
 	text-align: center;
@@ -106,6 +175,6 @@ footer {
 
 @media screen and (min-width: 768px) {
 	.container {
-	  margin: 1em 2em;
+		margin: 1em 2em;
 	}
-  }
+}

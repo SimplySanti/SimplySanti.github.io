@@ -115,39 +115,54 @@ body {
 	box-shadow: rgba(0, 0, 0, 0.15) 2px 4px 2.6px;
 }
 
-.about-me-section{
+.decoration-container {
+	height: 100%;
+	border: black 1px solid;
+	width: 100%;
+}
+
+.decoration-oval {
+	height: 6vh;
+	background-color: var(--primary-light);
+	width: 100%;
+	border-top-right-radius: 100%;
+	position: absolute;
+	bottom: 0;
+}
+
+.about-me-section {
 	width: 100%;
 	margin: 5vh 0;
 }
 
-.about-me-container{
+.about-me-container {
 	margin: 3vh 8vw;
 }
 
-.about-me-text{
+.about-me-text {
 	font-family: var(--font-family-primary);
 	font-size: 1.25rem;
 	font-weight: 400;
 	color: black;
 }
 
-.toolbox-section{
+.toolbox-section {
 	width: 100%;
-	margin: 5vh 0
+	margin: 5vh 0;
 }
 
-.toolbox-container{
+.toolbox-container {
 	display: grid;
-	gap: .5vw;
+	gap: 0.5vw;
 	grid-template-columns: repeat(3, 1fr);
 	margin: 3vh 8vw;
 }
 
-.cv-button-container{
+.cv-button-container {
 	margin: 0 8vw;
 }
 
-.cv-button{
+.cv-button {
 	height: 8vh;
 	margin: 5vh 0;
 	border-radius: 5px;
@@ -177,4 +192,36 @@ footer {
 	.container {
 		margin: 1em 2em;
 	}
+}
+
+.element-container {
+	display: grid;
+	height: 24vh;
+	margin: 4vh 0;
+	background-color: var(--secondary-light);
+	z-index: 1;
+	border-radius: 15px;
+	overflow: hidden;
+	box-shadow: rgba(0, 0, 0, 0.15) 2px 4px 2.6px;
+
+}
+
+.element-decoration {
+	grid-column: 1;
+	grid-row: 1;
+	z-index: 2;
+	margin-top: 33%;
+	border-top-right-radius: 100%;
+	background-color: var(--primary-light);
+}
+
+.element-img{
+	align-self: center;
+	margin: 0 4vw;
+	z-index: 3;
+	background-color: white;
+	height: 20vh;
+	grid-column: 1;
+	grid-row: 1;
+	border-radius: 15px;
 }

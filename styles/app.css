@@ -33,12 +33,19 @@ body {
 }
 
 .nav-bar {
-	height: 10vh;
+	height: 8vh;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	background-color: white;
-	margin: 0 2vw;
+}
+
+
+.logo-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 4vw;
 }
 
 .title-section {
@@ -97,7 +104,7 @@ body {
 
 .subtitle {
 	font-family: var(--font-family-primary);
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 	font-weight: 600;
 	color: var(--primary-dark);
 	margin: 0 8vw;
@@ -156,6 +163,7 @@ body {
 	gap: 0.5vw;
 	grid-template-columns: repeat(3, 1fr);
 	margin: 3vh 8vw;
+	text-align: center;
 }
 
 .cv-button-container {
@@ -224,4 +232,14 @@ footer {
 	grid-column: 1;
 	grid-row: 1;
 	border-radius: 15px;
+}
+
+.card-image{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+a{
+	text-decoration: none;
 }
